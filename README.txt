@@ -1,4 +1,5 @@
 Changes to PetClinic Roo Example
+Spring ROO 1.1.1.RELEASE
 
 1. clinic.roo
 	1.1 add json all to end of script
