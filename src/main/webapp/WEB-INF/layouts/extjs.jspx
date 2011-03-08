@@ -1,0 +1,57 @@
+<html xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:tiles="http://tiles.apache.org/tags-tiles" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" >  
+	
+	<jsp:output doctype-root-element="HTML" doctype-system="about:legacy-compat" />
+	
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />  
+		
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />	
+        <!-- ** CSS ** -->
+        <!-- base library -->
+        <link rel="stylesheet" type="text/css" href="resources/js/ext-3.3.1/resources/css/ext-all.css" />
+		<link rel="stylesheet" type="text/css" href="resources/js/ext-3.3.1/examples/shared/examples.css" /> 
+ 	
+        <!-- overrides to base library -->
+ 
+        <!-- ** Javascript ** -->
+        <!-- ExtJS library: base/adapter -->
+        <script type="text/javascript" src="resources/js/ext-3.3.1/adapter/ext/ext-base-debug.js"><!-- required for FF3 and Opera --></script>
+        <!-- ExtJS library: all widgets -->
+        <script type="text/javascript" src="resources/js/ext-3.3.1/ext-all-debug.js"><!-- required for FF3 and Opera --></script>
+ 
+ 
+        <!-- overrides to library -->
+    	<script type="text/javascript" src="resources/js/overrides/form/ComboBox.js"><!-- required for FF3 and Opera --></script>
+ 		
+        <!-- extensions -->
+
+        <!-- page specific -->
+		<script type="text/javascript">
+			// Path to the blank image should point to a valid location on your server
+			Ext.BLANK_IMAGE_URL = 'resources/js/ext-3.3.1/resources/images/default/s.gif';
+		</script>
+
+		<!-- Sub-framework JavaScript -->
+    	<script type="text/javascript" src="resources/js/PetCompany/listpanel/AbstractListPanel.js"><!-- required for FF3 and Opera --></script>
+    	<script type="text/javascript" src="resources/js/PetCompany/grid/OwnerEditor.js"><!-- required for FF3 and Opera --></script>
+    	<script type="text/javascript" src="resources/js/PetCompany/grid/VetEditor.js"><!-- required for FF3 and Opera --></script>
+    	<script type="text/javascript" src="resources/js/PetCompany/grid/PetEditor.js"><!-- required for FF3 and Opera --></script>
+    	<script type="text/javascript" src="resources/js/PetCompany/grid/VisitEditor.js"><!-- required for FF3 and Opera --></script>
+    	<script type="text/javascript" src="resources/js/PetCompany/panel/OwnerPetsEditor.js"><!-- required for FF3 and Opera --></script>
+    	<script type="text/javascript" src="resources/js/PetCompany/listpanel/OwnerList.js"><!-- required for FF3 and Opera --></script>
+    	<script type="text/javascript" src="resources/js/PetCompany/listpanel/PetList.js"><!-- required for FF3 and Opera --></script>
+    	<script type="text/javascript" src="resources/js/PetCompany/listpanel/VetList.js"><!-- required for FF3 and Opera --></script>
+    	<script type="text/javascript" src="resources/js/PetCompany/listpanel/VisitList.js"><!-- required for FF3 and Opera --></script>
+		
+		<!-- Application JavaScript -->
+    	<script type="text/javascript" src="resources/js/PetClinic/workspace.js"><!-- required for FF3 and Opera --></script>
+		
+		<spring:message code="application_name" var="app_name"/>
+		<title id="page-title"><spring:message code="welcome_h3" arguments="${app_name}" /></title>
+	</head>
+	
+  	<body class="tundra spring">
+  		<tiles:insertAttribute name="body"/> 
+	</body>
+</html>
