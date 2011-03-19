@@ -24,7 +24,6 @@
 	
 	<!-- selects a static view for rendering without the need for an explicit controller -->
 	<mvc:view-controller path="/" view-name="index"/>
-	<!-- setup static view for rendering index_extjs without the need for a controller -->
 	<mvc:view-controller path="/index_extjs" view-name="index_extjs"/>
 	<mvc:view-controller path="/uncaughtException"/>
 	<mvc:view-controller path="/resourceNotFound"/>

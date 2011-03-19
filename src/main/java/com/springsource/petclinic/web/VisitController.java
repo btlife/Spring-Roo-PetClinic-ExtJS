@@ -48,7 +48,7 @@ public class VisitController {
 			response.setTotal(0L);
 		}
 		// return the updated record
-        return new ResponseEntity<String>(new JSONSerializer().exclude("*.class").transform(new DateTransformer("MM/dd/yy"), Date.class).serialize(response), returnStatus);
+        return new ResponseEntity<String>(new JSONSerializer().exclude("*.class","data.pet","data.vet").transform(new DateTransformer("MM/dd/yy"), Date.class).serialize(response), returnStatus);
     }
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE, headers = "Accept=application/json")
@@ -93,7 +93,7 @@ public class VisitController {
 		}
 		
 		// Return list of retrieved performance areas
-        return new ResponseEntity<String>(new JSONSerializer().exclude("*.class").transform(new DateTransformer("MM/dd/yy"), Date.class).serialize(response), returnStatus);
+        return new ResponseEntity<String>(new JSONSerializer().exclude("*.class","data.pet","data.vet").transform(new DateTransformer("MM/dd/yy"), Date.class).serialize(response), returnStatus);
 	
 	}
 
@@ -116,6 +116,6 @@ public class VisitController {
 			response.setTotal(0L);
 		}
 		// return the created record with the new system generated id
-        return new ResponseEntity<String>(new JSONSerializer().exclude("*.class").transform(new DateTransformer("MM/dd/yy"), Date.class).serialize(response), returnStatus);
+        return new ResponseEntity<String>(new JSONSerializer().exclude("*.class","data.pet","data.vet").transform(new DateTransformer("MM/dd/yy"), Date.class).serialize(response), returnStatus);
     }
 }

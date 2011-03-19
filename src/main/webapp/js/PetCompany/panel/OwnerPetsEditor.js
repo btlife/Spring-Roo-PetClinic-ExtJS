@@ -34,7 +34,8 @@ PetCompany.panel.OwnerPetEditor = Ext.extend(Ext.Panel, {
                 scope     : this,  
                 rowclick : function(thisGrid, index, eventObj) {
                 	var record = thisGrid.store.getAt(index);
-                	if(record) {
+                	
+                	if(record && !record.dirty) {
                 		this.getComponent('petEditor').loadStoreByParams({
                 			find : 'ByOwnerId',
                 			ownerId : record.get('id')
